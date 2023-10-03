@@ -2,7 +2,8 @@
 #include "main.h"
 
 /**
- * create_array - creates an array of chars, and initializes it with a specific char.
+ * create_array - creates an array of chars, 
+ * and initializes it with a specific char.
  * @size: pointer to the string
  * @c: char
  * Return: char
