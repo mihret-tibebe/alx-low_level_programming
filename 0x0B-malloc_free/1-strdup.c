@@ -2,17 +2,18 @@
 #include "main.h"
 
 /**
- * _strdup -  returns a pointer to a new string which
- * is a duplicate of the string str
- * @str: pointer to the string
- * Return: char
+ * *_strdup - copies the string given as parameter
+ * @str: string to duplicate
+ *
+ * Return: pointer to the copied string (Success), NULL (Error)
  */
-
 char *_strdup(char *str)
 {
-	int i = 0;
-	int len = 0;
 	char *ch;
+	unsigned int i, len;
+
+	i = 0;
+	len = 0;
 
 	if (str == NULL)
 		return (NULL);
@@ -20,13 +21,12 @@ char *_strdup(char *str)
 	while (str[len])
 		len++;
 
-	ch = (char *) malloc( len + 1 * sizeof( char ));
-	ch = str;
+	ch = malloc(sizeof(char) * (len + 1));
 
 	if (ch == NULL)
 		return (NULL);
 
-	while ((ch[i] = str[i] != '\0'))
+	while ((ch[i] = str[i]) != '\0')
 		i++;
 
 	return (ch);
