@@ -39,7 +39,7 @@ char **strtow(char *str)
 	j = 0;
 
 
-	if (str == NULL || *str == "")
+	if (str == NULL)
 		return (NULL);
 
 	while(str[len])
