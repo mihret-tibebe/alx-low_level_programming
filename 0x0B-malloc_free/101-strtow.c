@@ -30,7 +30,7 @@ char **strtow(char *str)
 {
 	char **wList;
 	char *tmp;
-	int words, len, i, start, end, l;
+	int words, len, i, start, end, l, j;
 	words = 0;
 	len = 0;
 	start = 0;
@@ -39,7 +39,7 @@ char **strtow(char *str)
 	j = 0;
 
 
-	if (str == NULL || str == "")
+	if (str == NULL || str == '')
 		return (NULL);
 
 	while(str[len])
