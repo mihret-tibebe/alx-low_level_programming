@@ -21,7 +21,7 @@ int wordCount(char *s)
 	return (count);
 }
 /**
- * count_word - helper function to count the number of words in a string
+ * strtow - helper function to count the number of words in a string
  * @s: string to evaluate
  *
  * Return: number of words
@@ -55,7 +55,7 @@ char **strtow(char *str)
 			if ((str[i] != ' ') == (str[i] != '\0'))
 			{
 				end = i;
-				l-=i;
+				l = end = srart;
 				tmp = (char *) malloc(sizeof(char) * l);
 				if (tmp == NULL)
 					return (NULL);
