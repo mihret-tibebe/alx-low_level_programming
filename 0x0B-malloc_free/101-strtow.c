@@ -25,8 +25,8 @@ int wordCount(char *s)
 	return (count);
 }
 /**
- * strtow - helper function to count the number of words in a string
- * @s: string to evaluate
+ * strtow - function
+ * @str: string
  *
  * Return: number of words
  */
@@ -43,19 +43,15 @@ char **strtow(char *str)
 	l = 0;
 	j = 0;
 
-
 	while (str && str[len])
 		len++;
 
 	if (str == NULL || len == 0)
 		return (NULL);
-
 	words = wordCount(str);
-
 	wList = (char **) malloc(sizeof(char *) * (words + 1));
 	if (wList == NULL)
 		return (NULL);
-
 	for (i = 0; i <= len; i++)
 	{
 		if (str[i] == ' ' || str[i] == '\0')
@@ -65,16 +61,13 @@ char **strtow(char *str)
 			tmp = (char *) malloc(sizeof(char) * (l + 1));
 			if (tmp == NULL)
 				return (NULL);
-
-			while(start < end)
+			while (start < end)
 				*tmp++ = str[start++];
 			*tmp = '\0';
-
 			wList[j] = tmp - l;
 			/* free(tmp); */
 			j++;
-			start++;
-			
+			start++;	
 		}
 	}
 
