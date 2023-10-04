@@ -1,74 +1,99 @@
-#include <stdlib.h>
 #include "main.h"
 
-/**
- * wordCount - helper function to count the number of words in a string
- * @s: string to evaluate
- *
- * Return: number of words
- */
-int wordCount(char *s)
-{
-	int count, i;
-	count = 0;
-	i = 0;
+ 
 
-	while (s[i] != '\0')
-		{
-			if (s[i] == ' ')
-				count++;
-		}
-	return (count);
-}
 /**
- * count_word - helper function to count the number of words in a string
- * @s: string to evaluate
- *
- * Return: number of words
- */
+
+* strtow - splits a string into w
+
+* @str: string to split
+
+*
+
+* Return: pointer to an array of strings
+
+*/
+
 char **strtow(char *str)
+
 {
-	char **wList;
-	char *tmp;
-	int words, len, i, start, end, l, j;
-	words = 0;
-	len = 0;
-	start = 0;
-	end = 0;
-	l = 0;
-	j = 0;
 
+           int slen = 0, i, j = 0, k, w = 0, WordLen, start_index[1000], end_index[1000];
 
-	if (str == NULL)
-		return (NULL);
+           char **NewStr;
 
-	while(str[len])
-		len++;
+ 
 
-	words = wordCount(str);
+           for (i = 0; str[i] != 0; i++)
 
-	wList = (char **) malloc(sizeof(char *) * (words + 1));
+                      slen++;
 
-	for (i = 0; i <= len; i++)
-		{
-			l++;
-			if ((str[i] != ' ') == (str[i] != '\0'))
-			{
-				end = i;
-				l-=i;
-				tmp = (char *) malloc(sizeof(char) * l);
-				if (tmp == NULL)
-					return (NULL);
+           for (i = 0; str[i] != 0; i++)
 
-				while(start < end)
-					*tmp++ = str[start++];
-				*tmp = '\0';
+           {
 
-				wList[j] = tmp;
-				j++;
-				
-			}
-		}
+                      if (str[i] != ' ')
 
-	return (wList);
+                      {
+
+                                 start_index[j] = i;
+
+                                 while (str[i] != ' ' && str[i] != '\0')
+
+                                            i++;
+
+                                 end_index[j++] = i - 1;
+
+                                 w++;
+
+                      }
+
+           }
+
+           if (w == 0 || slen == 0 || str == NULL || *str == '\0')
+
+                      return (NULL);
+
+           NewStr = (char **) malloc(sizeof(char *) * (w + 1));
+
+           if (NewStr == NULL)
+
+                      return (NULL);
+
+           for (i = 0; i < w; i++)
+
+           {
+
+                      WordLen = end_index[i] - start_index[i] + 2;/* to add a null char*/
+
+                      NewStr[i] = (char *) malloc(sizeof(char) * WordLen);
+
+                      if (NewStr[i] == NULL)
+
+                      {
+
+                                 for (i--; i >= 0; i--)
+
+                                            free(NewStr[i]);
+
+                                 free(NewStr);
+
+                                 return (NULL);
+
+                      }
+
+                      k = start_index[i];
+
+                      for (j = 0; j < WordLen - 1; j++)
+
+                                 NewStr[i][j] = str[k++];
+
+                      NewStr[i][j] = '\0';
+
+           }
+
+           NewStr[i] = NULL;
+
+           return (NewStr);
+
 }
