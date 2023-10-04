@@ -75,6 +75,7 @@ char **strtow(char *str)
 				wList[j] = tmp;
 				free(tmp);
 				j++;
+				start++;
 				
 			}
 		}
