@@ -55,7 +55,7 @@ char **strtow(char *str)
 			if ((str[i] != ' ') == (str[i] != '\0'))
 			{
 				end = i;
-				l = end = srart;
+				l = end = start;
 				tmp = (char *) malloc(sizeof(char) * l);
 				if (tmp == NULL)
 					return (NULL);
