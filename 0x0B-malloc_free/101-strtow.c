@@ -73,7 +73,7 @@ char **strtow(char *str)
 				*tmp = '\0';
 
 				wList[j] = tmp;
-				free(tmp);
+				// free(tmp);
 				j++;
 				start++;
 				
