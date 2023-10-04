@@ -39,7 +39,7 @@ char **strtow(char *str)
 	j = 0;
 
 
-	if (str == NULL || str == '')
+	if (str == NULL || *str == "")
 		return (NULL);
 
 	while(str[len])
@@ -52,7 +52,7 @@ char **strtow(char *str)
 	for (i = 0; i <= len; i++)
 		{
 			l++;
-			if (str[i] != ' ' == str[i] != '\0')
+			if ((str[i] != ' ') == (str[i] != '\0'))
 			{
 				end = i;
 				l-=i;
@@ -64,7 +64,7 @@ char **strtow(char *str)
 					*tmp++ = str[start++];
 				*tmp = '\0';
 
-				wList[j] = str[start];
+				wList[j] = *str[start];
 				j++;
 				
 			}
