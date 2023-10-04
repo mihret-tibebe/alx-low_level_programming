@@ -9,23 +9,12 @@
  */
 int wordCount(char *s)
 {
-	int flag, c, w;
+	int count, i;
 
-	flag = 0;
-	w = 0;
+	for (i = 0; s[i] != '\0'; i++)
+		count++;
 
-	for (c = 0; s[c] != '\0'; c++)
-	{
-		if (s[c] == ' ')
-			flag = 0;
-		else if (flag == 0)
-		{
-			flag = 1;
-			w++;
-		}
-	}
-
-	return (w);
+	return (count);
 }
 /**
  * strtow - helper function to count the number of words in a string
