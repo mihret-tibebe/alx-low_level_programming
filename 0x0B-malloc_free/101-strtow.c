@@ -47,7 +47,7 @@ char **strtow(char *str)
 
 	words = wordCount(str);
 
-	wList = (char **) malloc(sizeof(char) * (words + 1));
+	wList = (char **) malloc(sizeof(char *) * (words + 1));
 
 	for (i = 0; i <= len; i++)
 		{
