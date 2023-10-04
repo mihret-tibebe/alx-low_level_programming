@@ -46,19 +46,21 @@ char **strtow(char *str)
 	j = 0;
 
 
-	if (str == NULL)
-		return (NULL);
-
-	while(str[len])
+	while(str && str[len])
 		len++;
+
+	if (str == NULL || len == 0)
+		return (NULL);
 
 	words = wordCount(str);
 
 	wList = (char **) malloc(sizeof(char *) * (words + 1));
+	if (wList == NULL)
+		return (NULL);
 
 	for (i = 0; i <= len; i++)
 		{
-			if ((str[i] != ' ') == (str[i] != '\0'))
+			if (str[i] != ' ' && str[i] != '\0')
 			{
 				end = i;
 				l = end - start;
