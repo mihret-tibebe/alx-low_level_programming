@@ -15,8 +15,8 @@ int wordCount(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[0] == ' ')
-			continue;
+		/*if (s[0] == ' ')
+			continue;*/
 		if (s[i] == ' ')
 			count++;
 	}
@@ -65,9 +65,8 @@ char **strtow(char *str)
 				*tmp++ = str[start++];
 			*tmp = '\0';
 			wList[j] = tmp - l;
-			/* free(tmp); */
 			j++;
-			start++;	
+			start++;
 		}
 	}
 
