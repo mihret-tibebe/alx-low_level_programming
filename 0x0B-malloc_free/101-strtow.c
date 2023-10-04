@@ -72,7 +72,7 @@ char **strtow(char *str)
 					*tmp++ = str[start++];
 				*tmp = '\0';
 
-				wList[j] = tmp;
+				wList[j] = tmp - l;
 				free(tmp);
 				j++;
 				start++;
