@@ -9,10 +9,10 @@
  */
 int wordCount(char *s)
 {
-	int flag, c, w;
+	int flag, c, words;
 
 	flag = 0;
-	w = 0;
+	words = 0;
 
 	for (c = 0; s[c] != '\0'; c++)
 	{
@@ -21,11 +21,11 @@ int wordCount(char *s)
 		else if (flag == 0)
 		{
 			flag = 1;
-			w++;
+			words++;
 		}
 	}
 
-	return (w);
+	return (words);
 }
 /**
  * strtow - function
