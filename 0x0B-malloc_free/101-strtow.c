@@ -67,11 +67,8 @@ char **strtow(char *str)
 				flag = 0;
 			}
 		}
-		else
-		{
-			flag++;
+		else if (flag++ == 0)
 			start = i;
-		}
 	}
 	return (wList);
 }
