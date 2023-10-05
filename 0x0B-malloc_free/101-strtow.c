@@ -56,10 +56,10 @@ char **strtow(char *str)
 	wList = (char **) malloc(sizeof(char *) * (words + 1));
 	if (wList == NULL)
 		return (NULL);
+	if (str[0] == ' ')
+		start = 1;
 	for (i = 0; i <= len; i++)
 	{
-		if (str[0] == ' ')
-			start = 1;
 		if (str[i] == ' ' || str[i] == '\0')
 		{
 			end = i;
