@@ -53,7 +53,7 @@ char **strtow(char *str)
 	{
 		if (str[i] == ' ' || str[i] == '\0')
 		{
-			if (flag == 0)	
+			if (flag)	
 			{
 				end = i;
 				l = end - start;
