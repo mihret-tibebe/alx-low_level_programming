@@ -66,7 +66,10 @@ char **strtow(char *str)
 			if (tmp == NULL)
 				return (NULL);
 			while (start < end)
+			{
+				sttart++;
 				*tmp++ = str[start];
+			}
 			*tmp = '\0';
 			wList[j] = tmp - l;
 			j++;
