@@ -49,7 +49,7 @@ char **strtow(char *str)
 	if (wList == NULL)
 		return (NULL);
 	
-	for (i = 0; i <= len; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (str[i] == ' ' || str[i] == '\0')
 		{
