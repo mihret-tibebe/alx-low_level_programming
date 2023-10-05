@@ -53,7 +53,7 @@ char **strtow(char *str)
 	{
 		if (str[i] == ' ' || str[i] == '\0')
 		{
-			if (flag)	
+			if (flag)
 			{
 				end = i;
 				tmp = (char *) malloc(sizeof(char) * (flag + 1));
