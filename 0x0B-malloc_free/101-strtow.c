@@ -15,14 +15,11 @@ int wordCount(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		/*if (s[0] == ' ')
-			continue;*/
+		if (s[0] == ' ')
+			continue;
 		if (s[i] == ' ')
 			count++;
 	}
-
-	if (s[0] == ' ')
-		count--;
 
 	count++;
 	return (count);
