@@ -49,7 +49,6 @@ char **strtow(char *str)
 
 	while (str && str[len])
 		len++;
-
 	if (str == NULL || len == 0)
 		return (NULL);
 	words = wordCount(str);
@@ -72,9 +71,8 @@ char **strtow(char *str)
 			*tmp = '\0';
 			wList[j] = tmp - l;
 			j++;
-			start++;
+			start = end;
 		}
 	}
-	wList[j] = NULL;
 	return (wList);
 }
