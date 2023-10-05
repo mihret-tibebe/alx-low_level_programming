@@ -9,24 +9,23 @@
  */
 int wordCount(char *s)
 {
-	int count, i;
+	int flag, c, w;
 
-	count = 0;
+	flag = 0;
+	w = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (c = 0; s[c] != '\0'; c++)
 	{
-		if (s[0] == ' ')
-		continue;
-		if (s[i] == ' ')
-		count++;
+		if (s[c] == ' ')
+			flag = 0;
+		else if (flag == 0)
+		{
+			flag = 1;
+			w++;
+		}
 	}
 
-	/*if (s[0] == ' ')*/
-		/*count--;*/
-
-	count++;
-
-	return (count);
+	return (w);
 }
 /**
  * strtow - function
