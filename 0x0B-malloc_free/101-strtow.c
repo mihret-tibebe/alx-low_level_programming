@@ -2,17 +2,14 @@
 #include "main.h"
 
 /**
- * wordCount - helper function to count the number of words in a string
- * @s: string to evaluate
+ * wordCount - word counter
+ * @s: string
  *
  * Return: number of words
  */
 int wordCount(char *s)
 {
-	int flag, c, w;
-
-	flag = 0;
-	w = 0;
+	int flag = 0, c, w = 0;
 
 	for (c = 0; s[c] != '\0'; c++)
 	{
@@ -29,14 +26,13 @@ int wordCount(char *s)
 }
 /**
  * **strtow - splits a string into words
- * @str: string to split
+ * @str: string
  *
- * Return: pointer to an array of strings (Success)
- * or NULL (Error)
+ * Return: pointer to an array of strings
  */
 char **strtow(char *str)
 {
-	char **matrix, *tmp;
+	char **wList, *tmp;
 	int i, k = 0, len = 0, words, c = 0, start, end;
 
 	while (*(str + len))
@@ -45,8 +41,8 @@ char **strtow(char *str)
 	if (words == 0)
 		return (NULL);
 
-	matrix = (char **) malloc(sizeof(char *) * (words + 1));
-	if (matrix == NULL)
+	wList = (char **) malloc(sizeof(char *) * (words + 1));
+	if (wList == NULL)
 		return (NULL);
 
 	for (i = 0; i <= len; i++)
@@ -62,7 +58,7 @@ char **strtow(char *str)
 				while (start < end)
 					*tmp++ = str[start++];
 				*tmp = '\0';
-				matrix[k] = tmp - c;
+				wList[k] = tmp - c;
 				k++;
 				c = 0;
 			}
@@ -71,7 +67,7 @@ char **strtow(char *str)
 			start = i;
 	}
 
-	matrix[k] = NULL;
+	wList[k] = NULL;
 
 	return (matrix);
 }
