@@ -58,6 +58,8 @@ char **strtow(char *str)
 		return (NULL);
 	for (i = 0; i <= len; i++)
 	{
+		if (str[0] == ' ')
+			start = 1;
 		if (str[i] == ' ' || str[i] == '\0')
 		{
 			end = i;
@@ -68,7 +70,7 @@ char **strtow(char *str)
 			while (start < end)
 				*tmp++ = str[start++];
 			*tmp = '\0';
-			wList[j] = tmp - l + 1;
+			wList[j] = tmp - l;
 			j++;
 			start++;
 		}
