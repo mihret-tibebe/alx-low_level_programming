@@ -38,7 +38,7 @@ char **strtow(char *str)
 {
 	char **wList;
 	char *tmp;
-	int words, len = 0, i, start = 0, end = 0, l = 0, j = 0, flag = 0;
+	int words, len = 0, i, start = 0, end = 0, j = 0, flag = 0;
 
 	while (str && str[len])
 		len++;
