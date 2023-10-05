@@ -2,12 +2,12 @@
 #include "main.h"
 
 /**
- * count_word - helper function to count the number of words in a string
+ * wordCount - helper function to count the number of words in a string
  * @s: string to evaluate
  *
  * Return: number of words
  */
-int count_word(char *s)
+int wordCount(char *s)
 {
 	int flag, c, w;
 
@@ -41,7 +41,7 @@ char **strtow(char *str)
 
 	while (*(str + len))
 		len++;
-	words = count_word(str);
+	words = wordCount(str);
 	if (words == 0)
 		return (NULL);
 
