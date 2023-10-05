@@ -33,7 +33,7 @@ int wordCount(char *s)
 char **strtow(char *str)
 {
 	char **wList, *tmp;
-	int i, k = 0, len = 0, words, c = 0, start, end;
+	int i, j = 0, len = 0, words, c = 0, start, end;
 
 	while (*(str + len))
 		len++;
@@ -58,8 +58,8 @@ char **strtow(char *str)
 				while (start < end)
 					*tmp++ = str[start++];
 				*tmp = '\0';
-				wList[k] = tmp - c;
-				k++;
+				wList[j] = tmp - c;
+				j++;
 				c = 0;
 			}
 		}
