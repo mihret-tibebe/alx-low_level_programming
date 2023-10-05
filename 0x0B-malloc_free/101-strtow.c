@@ -42,7 +42,7 @@ char **strtow(char *str)
 
 	words = 0;
 	len = 0;
-	start = 1;
+	start = 0;
 	end = 0;
 	l = 0;
 	j = 0;
@@ -68,7 +68,7 @@ char **strtow(char *str)
 			while (start < end)
 				*tmp++ = str[start++];
 			*tmp = '\0';
-			wList[j] = tmp - l;
+			wList[j] = tmp - l + 1;
 			j++;
 			start++;
 		}
