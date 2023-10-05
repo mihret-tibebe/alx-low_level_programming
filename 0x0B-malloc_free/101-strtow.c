@@ -24,7 +24,7 @@ int wordCount(char *s)
 	if (s[0] == ' ')
 		count--;
 
-	/*count++;*/
+	count++;
 	return (count);
 }
 /**
