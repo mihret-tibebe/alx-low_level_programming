@@ -70,6 +70,7 @@ char **strtow(char *str)
 		}
 		else
 		{
+			flag++;
 			start = i;
 		}
 	}
