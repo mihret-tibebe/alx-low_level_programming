@@ -62,7 +62,7 @@ char **strtow(char *str)
 				while (start < end)
 					*tmp++ = str[start++];
 				*tmp = '\0';
-				wList[j] = tmp - l;
+				wList[j] = tmp - flag;
 				j++;
 				flag = 0;
 			}
