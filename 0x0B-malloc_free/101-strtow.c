@@ -62,7 +62,7 @@ char **strtow(char *str)
 		{
 			end = i;
 			if (str[0] == ' ')
-				start = 1;
+				continue;
 
 			l = end - start;
 			tmp = (char *) malloc(sizeof(char) * (l + 1));
@@ -76,6 +76,5 @@ char **strtow(char *str)
 			start++;
 		}
 	}
-
 	return (wList);
 }
