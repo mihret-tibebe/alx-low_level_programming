@@ -69,5 +69,5 @@ char **strtow(char *str)
 
 	wList[k] = NULL;
 
-	return (matrix);
+	return (wList);
 }
