@@ -70,5 +70,6 @@ char **strtow(char *str)
 		else if (flag++ == 0)
 			start = i;
 	}
+	wList[j] = NULL;
 	return (wList);
 }
