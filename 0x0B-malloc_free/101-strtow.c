@@ -67,7 +67,7 @@ char **strtow(char *str)
 				return (NULL);
 			while (start < end)
 			{
-				sttart++;
+				start++;
 				*tmp++ = str[start];
 			}
 			*tmp = '\0';
