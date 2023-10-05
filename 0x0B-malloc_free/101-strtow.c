@@ -67,10 +67,10 @@ char **strtow(char *str)
 				j++;
 				flag = 0;
 			}
-			else
-			{
-				start = i;
-			}
+		}
+		else
+		{
+			start = i;
 		}
 	}
 	return (wList);
