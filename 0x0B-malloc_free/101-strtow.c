@@ -67,7 +67,7 @@ char **strtow(char *str)
 			start = i;
 	}
 
-	wList[k] = NULL;
+	wList[j] = NULL;
 
 	return (wList);
 }
