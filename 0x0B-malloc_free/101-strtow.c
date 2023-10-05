@@ -71,7 +71,7 @@ char **strtow(char *str)
 			*tmp = '\0';
 			wList[j] = tmp - l;
 			j++;
-			start = end;
+			start++;
 		}
 	}
 	return (wList);
