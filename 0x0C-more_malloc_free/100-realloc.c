@@ -1,66 +1,41 @@
 #include <stdlib.h>
 #include "main.h"
-
 /**
- * calc_min - calculates minimum of two sizes
- * @o: old size
- * @n: new size
- * Return: minimum value
- */
-unsigned int calc_min(unsigned int o, unsigned int n)
-{
-	if (o < n)
-		return (o);
-	return (n);
-}
-
-/**
- * _realloc - reallocates a memory block using malloc and free
- * @ptr:  pointer to previously allocated memory
- * @old_size: old size of ptr
- * @new_size: new size of ptr
- * Return: new reallocated memory
- */
+  * _realloc - reallocates a memory block using malloc and free.
+  * @ptr: pointer to the memory previously allocated with a
+  * call to ``` malloc : malloc(old_size) ```.
+  * @old_size: size in bytes allocated for ptr.
+  * @new_size: size in bytes of new memory block.
+  *
+  * Return: pointer to new mem block, NULL or ptr.
+  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	void *mem;
-	char *ch;
-	char *c;
-	unsigned int size, i = 0;
+	char *nptr;
+	unsigned int i;
 
 	if (new_size == old_size)
 		return (ptr);
-
-	if (ptr == NULL)
-	{
-		mem = malloc(new_size);
-		if (!mem)
-			return (NULL);
-		ch = (char *) mem;
-	}
-
-	if (new_size == 0 && ptr != NULL)
+	if ((new_size == 0) && (ptr != NULL))
 	{
 		free(ptr);
 		return (NULL);
 	}
-
-	mem = malloc(new_size);
-	if (!mem)
-		return (NULL);
-
-	ch = (char *) mem;
-	c = (char *) ptr;
-
-	size = calc_min(old_size, new_size);
-
-	while (i < size)
+	if (ptr == NULL)
 	{
-		ch[i] = c[i];
-		i++;
+		nptr = malloc(new_size);
+		if (nptr == NULL)
+			return (NULL);
+	}
+	if (new_size > old_size && (ptr != NULL))
+	{
+		nptr = malloc(new_size);
+		if (nptr == NULL)
+			return (nptr);
+		for (i = 0; i < old_size; i++)
+			nptr[i] = *((char *)ptr + 1);
+		free(ptr);
 	}
 
-	free(ptr);
-
-	return (mem);
+	return (nptr);
 }
