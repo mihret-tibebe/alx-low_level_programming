@@ -9,6 +9,4 @@
 void *malloc_checked(unsigned int b)
 {
 	int *i = malloc (sizeof * b);
-	if (i == NULL)
-		return (98);
 }
