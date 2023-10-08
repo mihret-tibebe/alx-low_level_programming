@@ -9,11 +9,11 @@
  * space in memory, which contains s1, followed by the 
  * first n bytes of s2, and null terminated
  */
-int word_count(char *s1)
+unsigned int word_count(char *s1)
 {
-	int len = 0;
+	unsigned int len = 0;
 
-	while(s1[len] != 0)
+	while (s1[len] != 0)
 		len++;
 
 	return (len);
@@ -21,7 +21,7 @@ int word_count(char *s1)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ch;
-	int len1 = 0, len2 = 0, len = 0;
+	unsigned int len1 = 0, len2 = 0, len = 0;
 
 	len1 = word_count(s1);
 	len2 = word_count(s2);
