@@ -24,6 +24,7 @@ unsigned int word_count(char *s1)
  * string_nconcat - concatenates two strings
  * @s1: string
  * @s2: string
+ * @n: number of string to be copied from s2
  *
  * Return: a pointer that point to a newly allocated memory
  */
