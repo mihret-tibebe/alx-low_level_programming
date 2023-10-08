@@ -2,13 +2,10 @@
 #include "main.h"
 
 /**
- * string_nconcat - concatenates two strings
+ * word_count - counts number of characters in a word
  * @s1: string
- * @s2: string
- * Return: a pointer that point to a newly allocated 
- * space in memory, which contains s1, followed by the 
- * first n bytes of s2, and null terminated
- */
+ * Return: string length
+*/
 unsigned int word_count(char *s1)
 {
 	unsigned int len = 0;
@@ -21,6 +18,14 @@ unsigned int word_count(char *s1)
 
 	return (len);
 }
+/**
+ * string_nconcat - concatenates two strings
+ * @s1: string
+ * @s2: string
+ * Return: a pointer that point to a newly allocated 
+ * space in memory, which contains s1, followed by the 
+ * first n bytes of s2, and null terminated
+ */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ch;
