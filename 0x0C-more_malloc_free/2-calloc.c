@@ -17,10 +17,13 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	mem = malloc(size * nmemb);
 	if (mem == NULL)
+	{
+		free(arr);
 		return (NULL);
+	}
 
 	ch = (char *) mem;
-	while (i < size * nmemb)
+	while (i < (size * nmemb))
 	{
 		ch[i] = '\0';
 		i++;
