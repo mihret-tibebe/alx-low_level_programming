@@ -2,6 +2,22 @@
 #include "main.h"
 
 /**
+ * abs - calculates the absolute value of passed integer
+ * @a: the integer whose absolute value will be calculated
+ * Return: if a < 0, the negation of a i.e. -1 * a
+ *		   otherwise return a without modification
+ */
+int abs(int a)
+{
+	if (a < 0)
+	{
+		a *= -1;
+		return (-1 * a);
+	}
+	return (a);
+}
+
+/**
  * array_range - creates an array of integers
  * @min: minimum value
  * @max: maximum value
@@ -15,7 +31,7 @@ int *array_range(int min, int max)
 	if (min > max)
 		return (NULL);
 
-	len = max - min;
+	len = abs(max) - abs(min);
 
 	arr = (int *) malloc(sizeof(int) * len);
 
