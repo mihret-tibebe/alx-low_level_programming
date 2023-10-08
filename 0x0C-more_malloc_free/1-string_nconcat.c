@@ -14,16 +14,14 @@ int word_count(char *s1)
 	int len = 0;
 
 	while(s1[len])
-	{
 		len++;
-	}
 
 	return (len);
 }
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ch;
-	int len1, len2, len;
+	int len1 = 0, len2 = 0, len = 0;
 
 	len1 = word_count(s1);
 	len2 = word_count(s2);
