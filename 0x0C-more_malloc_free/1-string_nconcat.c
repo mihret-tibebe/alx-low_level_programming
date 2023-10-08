@@ -43,7 +43,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		ch[i] = s1[i];
 	}
 
-	i++;
+
 	for (j = 0; i <= (len1 + len); j++)
 	{
 		ch[i] = s2[j];
