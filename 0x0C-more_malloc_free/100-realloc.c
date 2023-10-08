@@ -5,22 +5,22 @@
  * calc_min - calculates minimum of two sizes
  * @o: old size
  * @n: new size
- * Return: minimun value
-*/
+ * Return: minimum value
+ */
 unsigned int calc_min(unsigned int o, unsigned int n)
 {
 	if (o < n)
 		return (o);
 	return (n);
 }
- 
+
 /**
  * _realloc - reallocates a memory block using malloc and free
  * @ptr:  pointer to previously allocated memory
  * @old_size: old size of ptr
  * @new_size: new size of ptr
  * Return: new reallocated memory
-*/
+ */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *mem;
@@ -35,7 +35,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	{
 		mem = malloc(new_size);
 		if (!mem)
-		return (NULL);
+			return (NULL);
 	}
 
 	if (new_size == 0 && ptr != NULL)
