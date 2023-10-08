@@ -23,10 +23,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	}
 
 	ch = (char *) mem;
-	while (i < (size * nmemb))
+	for (i = 0; i < nmemb * size; i++)
 	{
 		ch[i] = '\0';
-		i++;
 	}
 
 	return (mem);
