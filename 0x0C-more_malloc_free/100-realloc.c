@@ -19,7 +19,6 @@ unsigned int calc_min(unsigned int o, unsigned int n)
  * @ptr:  pointer to previously allocated memory
  * @old_size: old size of ptr
  * @new_size: new size of ptr
- * 
  * Return: new reallocated memory
 */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
