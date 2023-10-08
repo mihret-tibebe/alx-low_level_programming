@@ -24,7 +24,7 @@ unsigned int word_count(char *s1)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ch;
-	unsigned int len1, len2, len = 0, i = 0, j = 1;
+	unsigned int len1, len2, len = 0, i = 0, j = 0;
 
 	len1 = word_count(s1);
 	len2 = word_count(s2);
