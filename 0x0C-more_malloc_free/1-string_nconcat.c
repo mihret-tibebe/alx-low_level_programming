@@ -16,7 +16,7 @@ unsigned int word_count(char *s1)
 	if (s1 == NULL)
 		return (len);
 
-	while (s1[len] != '\0')
+	while (s1[len] != 0)
 		len++;
 
 	return (len);
