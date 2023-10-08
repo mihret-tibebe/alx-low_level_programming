@@ -23,7 +23,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	}
 
 	ch = (char *) mem;
-	while (i < nmemb)
+	while (i < size * nmemb)
 	{
 		ch[i] = '\0';
 		i++;
