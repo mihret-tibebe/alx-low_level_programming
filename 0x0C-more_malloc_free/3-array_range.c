@@ -7,6 +7,7 @@
  * Return: if a < 0, the negation of a i.e. -1 * a
  *		   otherwise return a without modification
  */
+/*
 int abs(int a)
 {
 	if (a < 0)
@@ -15,7 +16,7 @@ int abs(int a)
 		return (a);
 	}
 	return (a);
-}
+}*/
 
 /**
  * array_range - creates an array of integers
@@ -28,8 +29,9 @@ int *array_range(int min, int max)
 	int len, i;
 	int *arr;
 
-	len = abs(max) - abs(min);
-	len = abs(len);
+	/*len = abs(max) - abs(min);
+	len = abs(len);*/
+	len = max - min;
 
 	if (min > max)
 		return (NULL);
