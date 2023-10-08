@@ -2,19 +2,6 @@
 #include "main.h"
 
 /**
- * calc_min - calculates minimum of two sizes
- * @o: old size
- * @n: new size
- * Return: minimum value
- */
-unsigned int calc_min(unsigned int o, unsigned int n)
-{
-	if (o < n)
-		return (o);
-	return (n);
-}
-
-/**
  * _realloc - reallocates a memory block using malloc and free
  * @ptr:  pointer to previously allocated memory
  * @old_size: old size of ptr
