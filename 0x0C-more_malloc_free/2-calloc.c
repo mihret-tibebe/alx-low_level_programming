@@ -22,4 +22,5 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		mem[i] = 0;
 	}
+	return (mem);
 }
