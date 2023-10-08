@@ -52,7 +52,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	ch = (char *) mem;
 	c = (char *) ptr;
 
-	size = calc_min (old_size, new_size);
+	size = calc_min(old_size, new_size);
 
 	while (i < size)
 	{
