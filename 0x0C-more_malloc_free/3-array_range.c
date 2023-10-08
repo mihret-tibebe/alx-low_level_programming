@@ -12,7 +12,7 @@ int abs(int a)
 	if (a < 0)
 	{
 		a *= -1;
-		return (-1 * a);
+		return (a);
 	}
 	return (a);
 }
