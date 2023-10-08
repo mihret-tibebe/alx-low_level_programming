@@ -18,7 +18,7 @@ unsigned int calc_min(unsigned int o, unsigned int n)
  * _realloc - reallocates a memory block using malloc and free
  * @ptr:  pointer to previously allocated memory
  * @old_size: old size of ptr
- * new_size: new size of ptr
+ * @new_size: new size of ptr
  * 
  * Return: string length
 */
