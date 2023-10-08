@@ -13,6 +13,9 @@ unsigned int word_count(char *s1)
 {
 	unsigned int len = 0;
 
+	if (s1 == NULL)
+		s1 = "";
+
 	while (s1[len] != 0)
 		len++;
 
@@ -30,7 +33,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		len = len2;
 	len = n;
 
-	ch = malloc(sizeof(char) * ( len1 + len ));
+	ch = (char *) malloc(sizeof(char) * ( len1 + len + 1 ));
 	if (ch == NULL)
 		return (NULL);
 
