@@ -8,13 +8,14 @@
  * @new_size: new size of ptr
  * Return: new reallocated memory
  */
-
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *mem;
 	char *ch;
 	char *c;
 	unsigned int i = 0;
+
+	c = NULL;
 
 	if (new_size == old_size)
 		return (ptr);
