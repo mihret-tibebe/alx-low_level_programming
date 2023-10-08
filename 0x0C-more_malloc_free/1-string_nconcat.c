@@ -19,6 +19,7 @@ unsigned int word_count(char *s1)
 
 	return (len);
 }
+
 /**
  * string_nconcat - concatenates two strings
  * @s1: string
