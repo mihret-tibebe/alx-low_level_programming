@@ -25,6 +25,7 @@ unsigned int calc_min(unsigned int o, unsigned int n)
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *mem;
+	char *ch;
 	unsigned int size, i = 0;
 
 	if (new_size == old_size)
@@ -40,12 +41,16 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	}
 
 	mem = malloc(new_size);
+	if (!mem)
+		return (NULL);
+
+	ch = (char *) mem;
 
 	size = calc_min(old_size, new_size);
 
 	while (i < size)
 	{
-		/*mem[i] = ptr[i];*/
+		ch[i] = ptr[i];
 		i++;
 	}
 	free(ptr);
