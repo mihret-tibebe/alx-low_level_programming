@@ -29,6 +29,7 @@ int *array_range(int min, int max)
 	int *arr;
 
 	len = abs(max) - abs(min);
+	len = abs(len);
 
 	if (min > max)
 		return (NULL);
