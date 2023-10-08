@@ -36,7 +36,7 @@ int *array_range(int min, int max)
 	if (min > max)
 		return (NULL);
 
-	arr = (int *) malloc(sizeof(int) * len + 1);
+	arr = (int *) malloc(sizeof(int) * (len + 1));
 
 	if (!arr)
 		return (NULL);
