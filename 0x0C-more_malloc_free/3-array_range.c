@@ -28,12 +28,12 @@ int *array_range(int min, int max)
 	int len, i;
 	int *arr;
 
+	len = abs(max) - abs(min);
+
 	if (min > max)
 		return (NULL);
 
-	len = abs(max) - abs(min);
-
-	arr = (int *) malloc(sizeof(int) * len);
+	arr = (int *) malloc(sizeof(int) * len + 1);
 
 	if (!arr)
 		return (NULL);
