@@ -41,7 +41,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 			return (NULL);
 		ch = (char *) mem;
 
-		while (i < size)
+		while (i < old_size)
 		{
 			ch[i] = c[i];
 			i++;
