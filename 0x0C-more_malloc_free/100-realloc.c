@@ -5,7 +5,7 @@
  * calc_min - calculates minimum of two sizes
  * @o: old size
  * @n: new size
- *Return: minimun value
+ * Return: minimun value
 */
 unsigned int calc_min(unsigned int o, unsigned int n)
 {
@@ -27,9 +27,8 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	void *mem;
 	char *ch;
 	char *c;
-	unsigned int size, i;
+	unsigned int size, i = 0;
 
-	i = 0;
 	if (new_size == old_size)
 		return (ptr);
 
