@@ -7,8 +7,21 @@
 */
 void print_dog(struct dog *d)
 {
-	struct dog d1 = d;
-	printf("Name: %s\n", d1->name);
-	printf("Age: %d\n", d1->age);
-	printf("Owner: %s\n", d1->owner);
+	if (d == NULL)
+		return;
+	
+	printf("Name: ");
+	if (d->name == NULL)
+		printf("(nil)");
+	printf("%s\n", d->name);
+	
+	printf("Age: ");
+	if (d->age == NULL)
+		printf("(nil)");
+	printf("%f\n", d->age);
+	
+	printf("Owner: ");
+	if (d->owner == NULL)
+		printf("(nil)");
+	printf("%s\n", d->owner)
 }
