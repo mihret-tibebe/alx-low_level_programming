@@ -4,8 +4,8 @@
 /**
  * struct dog - defines a dog with it's name, age and owner
  * @name: name of the dog
- * @age: how old the dog is
- * @owner: the owner of the dog
+ * @age: age of the dog
+ * @owner: owner of the dog
  */
 struct dog
 {
