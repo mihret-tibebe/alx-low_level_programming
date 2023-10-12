@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 0x0F. C - Function pointers
 
 ## Intro to pointers to functions!!!
@@ -21,3 +22,6 @@
 * A program that performs simple operations.
 
 ---
+=======
+0x0F-function_pointers exercises
+>>>>>>> 4c4c569f628d16ed41ce9f50d55bcfabe08b38cf

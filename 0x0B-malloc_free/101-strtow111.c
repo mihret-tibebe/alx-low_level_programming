@@ -2,14 +2,17 @@
 #include "main.h"
 
 /**
- * wordCount - word counter
- * @s: string
+ * wordCount - helper function to count the number of words in a string
+ * @s: string to evaluate
  *
  * Return: number of words
  */
 int wordCount(char *s)
 {
-	int flag = 0, c, w = 0;
+	int flag, c, words;
+
+	flag = 0;
+	words = 0;
 
 	for (c = 0; s[c] != '\0'; c++)
 	{
@@ -18,56 +21,54 @@ int wordCount(char *s)
 		else if (flag == 0)
 		{
 			flag = 1;
-			w++;
+			words++;
 		}
 	}
 
-	return (w);
+	return (words);
 }
 /**
- * **strtow - splits a string into words
+ * strtow - function
  * @str: string
  *
- * Return: pointer to an array of strings
+ * Return: number of words
  */
 char **strtow(char *str)
 {
-	char **wList, *tmp;
-	int i, j = 0, len = 0, words, c = 0, start, end;
+	char **wList;
+	char *tmp;
+	int words, len = 0, i, start = 0, end = 0, j = 0, flag = 0;
 
-	while (*(str + len))
+	while (str && str[len])
 		len++;
-	words = wordCount(str);
-	if (words == 0)
+	if (str == NULL || len == 0)
 		return (NULL);
-
+	words = wordCount(str);
 	wList = (char **) malloc(sizeof(char *) * (words + 1));
 	if (wList == NULL)
 		return (NULL);
-
-	for (i = 0; i <= len; i++)
+	
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (str[i] == ' ' || str[i] == '\0')
 		{
-			if (c)
+			if (flag)
 			{
 				end = i;
-				tmp = (char *) malloc(sizeof(char) * (c + 1));
+				tmp = (char *) malloc(sizeof(char) * (flag + 1));
 				if (tmp == NULL)
 					return (NULL);
 				while (start < end)
 					*tmp++ = str[start++];
 				*tmp = '\0';
-				wList[j] = tmp - c;
+				wList[j] = tmp - flag;
 				j++;
-				c = 0;
+				flag = 0;
 			}
 		}
-		else if (c++ == 0)
+		else if (flag++ == 0)
 			start = i;
 	}
-
 	wList[j] = NULL;
-
 	return (wList);
 }
