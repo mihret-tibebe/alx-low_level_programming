@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 0x13. C - More singly linked lists
 
 ## Description
@@ -50,3 +51,6 @@ What you should learn from this project:
 
 ### [10. Delete at index](./10-delete_nodeint.c)
 * Write a function that deletes the node at index index of a listint\_t linked list.
+=======
+0x13-more_singly_linked_lists exercise
+>>>>>>> c69993cee72675dd4cffada2122cbb093e090cab
