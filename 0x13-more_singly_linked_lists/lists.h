@@ -1,9 +1,8 @@
-<<<<<<< HEAD
-#ifndef ALX_LOW_LEVEL_PROGRAMMING_LISTS_H
-#define ALX_LOW_LEVEL_PROGRAMMING_LISTS_H
+#ifndef _LISTS_
+#define _LISTS_
 
-#include "stdio.h"
-#include "stdlib.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * struct listint_s - singly linked list
@@ -11,7 +10,7 @@
  * @next: points to the next node
  *
  * Description: singly linked list node structure
- *
+ * for Holberton project
  */
 typedef struct listint_s
 {
@@ -19,8 +18,19 @@ typedef struct listint_s
 	struct listint_s *next;
 } listint_t;
 
-=======
->>>>>>> c69993cee72675dd4cffada2122cbb093e090cab
+/**
+ * struct listp_s - singly linked list
+ * @p: pointers of nodes
+ * @next: points to the next node
+ *
+ * Description: singly linked list of pointers
+ */
+typedef struct listp_s
+{
+	void *p;
+	struct listp_s *next;
+} listp_t;
+
 size_t print_listint(const listint_t *h);
 size_t listint_len(const listint_t *h);
 listint_t *add_nodeint(listint_t **head, const int n);
@@ -32,13 +42,9 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);
 int sum_listint(listint_t *head);
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
 int delete_nodeint_at_index(listint_t **head, unsigned int index);
-<<<<<<< HEAD
-unsigned int list_len(listint_t *h);
-
-#endif /* ALX_LOW_LEVEL_PROGRAMMING_LISTS_H */
-=======
 listint_t *reverse_listint(listint_t **head);
 size_t print_listint_safe(const listint_t *head);
 size_t free_listint_safe(listint_t **h);
 listint_t *find_listint_loop(listint_t *head);
->>>>>>> c69993cee72675dd4cffada2122cbb093e090cab
+
+#endif
